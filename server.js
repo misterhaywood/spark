@@ -40,7 +40,7 @@ const verifyToken = (req, res, next) => {
   });
 };
 
-// app.use("/fruits", require("./controllers/fruitsController.js"));
+app.use("/notes", require("./controllers/notesController.js"));
 // app.use("/users", verifyToken, require("./controllers/usersController.js"));
 // app.use("/auth", require("./controllers/authController.js"));
 

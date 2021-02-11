@@ -8,7 +8,11 @@ module.exports = {
          {
            name: 'First Note',
            content: 'This is the first note.'
-          }
+          },
+          {
+            name: 'Another First Note',
+            content: 'This is NOT the first note. 😊'
+           },
         ], {});
   },
 

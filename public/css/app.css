@@ -1,0 +1,13 @@
+body {
+  color: black;
+}
+
+input[type=textarea] {
+  border: 10px solid green;
+  vertical-align: top;
+  height: 300px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
