@@ -23,6 +23,9 @@ module.exports = {
         defaultValue: new Date(),
         allowNull: false,
         type: Sequelize.DATE
+      },
+      userId: {
+        type: Sequelize.INTEGER
       }
     });
   },

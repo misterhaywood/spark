@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>note</h1>
-    <%= notes.name %> last updated by <br><br> <%= notes.content %>.
+    <%= notes.name %> last updated <%= notes.updatedAt %><br><br> <%= notes.content %>.
     
     <% for (let i=0; i< notes.length; i++){ %>
     <li>

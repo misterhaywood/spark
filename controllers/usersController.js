@@ -6,24 +6,19 @@ const Note = require('../models').Note;
 
 // GET USERS PROFILE
 router.get("/profile/:id", (req, res) => {
-  // IF USER ID FROM TOKEN MATCHES THE REQUESTED ENDPOINT, LET THEM IN
-  if (req.user.id == req.params.id) {
-    User.findByPk(req.params.id, {
-      include: [
-        {
-          model: Note,
-          attributes: ["id", "name"],
-        },
-      ],
-    }).then((user) => {
-      res.render("users/profile.ejs", {
-        user,
-      });
+  User.findByPk(req.params.id, {
+    include: [  
+      {
+        model: Note,
+        attributes: ["id", "name"],
+      },
+    ],
+  }).then((userProfile) => {
+    console.log(userProfile)
+    res.render("users/profile.ejs", {
+      user: userProfile,
     });
-  } else {
-    // res.json("unauthorized");
-    res.redirect("/");
-  }
+  });
 });
 
 // EDIT PROFILE

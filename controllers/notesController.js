@@ -7,25 +7,12 @@ router.get("/new", (req, res) => {
     res.render("new.ejs");
 });
 
-router.post("/", (req, res) => {
-    Note.create(req.body).then((newNote) => {
-      res.redirect("/notes");
-    });
-});
+
 
 router.get("/:id/edit", function (req, res) {
   Note.findByPk(req.params.id).then((notes) => {
     res.render('edit.ejs', { notes });
   });
-});
-
-router.put("/:id", (req, res) => {
-    Note.update(req.body, {
-      where: { id: req.params.id },
-      returning: true,
-    }).then((notes) => {
-          res.redirect("/notes");
-    });
 });
 
 //SHOW
@@ -39,6 +26,15 @@ router.get("/:id", (req, res) => {
     })
 })
 
+router.put("/:id", (req, res) => {
+  Note.update(req.body, {
+    where: { id: req.params.id },
+    returning: true,
+  }).then((notes) => {
+        res.redirect("/notes");
+  });
+});
+
 router.get('/', (req, res) => {
     Note.findAll().then((notes) => {
         res.render('index.ejs', {
@@ -46,6 +42,12 @@ router.get('/', (req, res) => {
         })
     })
 })
+
+router.post("/", (req, res) => {
+  Note.create(req.body).then((newNote) => {
+    res.redirect("/notes");
+  });
+});
 
 // DELETE USER
 router.delete("/:id", (req, res) => {
