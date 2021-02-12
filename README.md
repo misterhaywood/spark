@@ -1,4 +1,4 @@
-# spark
+# SPARK
 
 Spark is a writing app.
 
