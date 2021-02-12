@@ -7,11 +7,13 @@ module.exports = {
        [
          {
            name: 'First Note',
-           content: 'This is the first note.'
+           content: 'This is the first note.',
+           userId: 1
           },
           {
             name: 'Another First Note',
-            content: 'This is NOT the first note. 😊'
+            content: 'This is NOT the first note. 😊',
+            userId: 3
            },
         ], {});
   },

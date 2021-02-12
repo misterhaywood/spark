@@ -10,21 +10,22 @@
     <h1>Notes</h1>
 
     <nav>
-      <a href="/notes/new">New Note</a>
+      <a href="/notes/new"> 💡 New Note</a>
     </nav>
 
       <ul>
         <% for(let i=0; i<notes.length; i++) { %>
         <li>
           <a href="/notes/<%= notes[i].id %>"> <%=notes[i].name%> </a>
-          <!--  ADD DELETE FORM HERE-->
-          <form action="/notes/<%= notes[i].id; %>?_method=DELETE" method="POST">
-            <input type="submit" value="DELETE" />
-          </form>
           <!-- Add edit link here  -->
           <form action="/notes/<%= notes[i].id; %>/edit">
-            <input type="submit" value="EDIT"/>
+            <input type="submit" value="✏️ EDIT"/>
           </form>
+          <!--  ADD DELETE FORM HERE-->
+          <form action="/notes/<%= notes[i].id; %>?_method=DELETE" method="POST">
+            <input type="submit" value="🗑️ DELETE" />
+          </form>
+          <br>
         </li>
         <% } %>
       </ul>

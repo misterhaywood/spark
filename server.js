@@ -41,12 +41,12 @@ const verifyToken = (req, res, next) => {
 };
 
 app.use("/notes", require("./controllers/notesController.js"));
-// app.use("/users", verifyToken, require("./controllers/usersController.js"));
-// app.use("/auth", require("./controllers/authController.js"));
+app.use("/users", verifyToken, require("./controllers/usersController.js"));
+app.use("/auth", require("./controllers/authController.js"));
 
 // INDEX
 app.get('/', (req, res) => {
-  res.send('HI');
+  res.render("users/index.ejs");
 });
 
 app.listen(process.env.PORT, () => {
