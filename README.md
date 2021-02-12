@@ -10,26 +10,32 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-
-objective
-
 ## description
 CRUD app
 
-installation
+## Installation
 
-main features
+Prerequisites for local development
+- NodeJS
+- postgres
+- pgAdmin (optional)
+
+## Features
 You can create, read, edit and remove notes.
 
-user stories
-I want to create a note
+## Technologies
+Javascript ES6  
+HTML5
+REST  
+CRUD  
 
-technologies used
-javascript es6, html5
-rest
-crud
-sequelize assoc
-ejs
-
-
-ERD or wireframe
+## user stories
+- [x] I want to create a note  
+- [x] I want to create a user
+- [ ] I want my password encrypted
+- [ ] I want use a text editor for the note
+- [x] I want to link my user and their notes
+- [ ] I want to delete a note
+- [ ] I want to edit a note
+- [ ] I want to delete my account
+- [ ] I want a blinking cursor

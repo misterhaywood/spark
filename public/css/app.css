@@ -1,5 +1,11 @@
 body {
-  color: black;
+  color: white;
+  background-color: rgb(38, 42, 46);
+  font-family: 'Graphik'
+}
+
+a {
+  color: whitesmoke;
 }
 
 input[type=textarea] {
