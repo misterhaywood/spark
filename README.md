@@ -1,10 +1,6 @@
 # SPARK
 
-Spark is a writing app.
-
-
-This repo contains the source for the [Spark app](https://ssparks.herokuapp.com/). You can create, read, edit and remove notes. 
-
+Spark is a writing app where you can create, read, edit and remove notes. This repo contains the source for the [Spark app](https://ssparks.herokuapp.com/).
 
 ## Usage
 Setup an account [with Spark](https://ssparks.herokuapp.com) to start writing now.
